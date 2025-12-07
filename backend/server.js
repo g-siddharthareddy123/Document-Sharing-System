@@ -8,6 +8,7 @@ const app = express();
 // ----- MIDDLEWARE -----
 const allowedOrigins = [
   "http://localhost:5173",         // local Vite frontend
+  "https://document-sharing-system-ekuw.onrender.com",
   process.env.FRONTEND_URL         // production frontend (Render)
 ];
 

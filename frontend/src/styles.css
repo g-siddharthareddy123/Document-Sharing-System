@@ -1,0 +1,42 @@
+/* styles.css - professional style */
+:root{
+  --primary:#0d6efd;
+  --muted:#6c757d;
+  --card-bg:#ffffff;
+  --page-bg:#f4f6f8;
+}
+
+body{background:var(--page-bg);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+.container{max-width:1200px;margin:0 auto;padding:1.5rem;}
+
+.navbar{background:#fff;border-bottom:1px solid rgba(0,0,0,0.05);}
+
+.dashboard{min-height:100vh;display:flex;}
+.sidebar{width:260px;min-height:100vh;background:#fff;border-right:1px solid rgba(0,0,0,0.06);}
+.sidebar-top{border-bottom:1px solid rgba(0,0,0,0.03);}
+.avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#6610f2);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;margin:0 auto;}
+.sidebar .nav-link{color:#333;padding:10px 14px;border-radius:6px;}
+.sidebar .nav-link:hover{background:#f8f9fa;text-decoration:none;}
+.content{background:transparent;padding:2rem;}
+
+/* Cards */
+.card{background:var(--card-bg);border-radius:10px;box-shadow:0 6px 18px rgba(12,30,50,0.04);}
+
+/* Dropzone */
+.dropzone{border:2px dashed rgba(13,110,253,0.15);background:linear-gradient(180deg, rgba(13,110,253,0.03), transparent);border-radius:8px;cursor:pointer;}
+
+/* Document card */
+.doc-card .card-body{display:flex;flex-direction:column;padding:1rem;}
+.doc-card h6{font-size:1rem;margin-bottom:0.25rem;}
+.doc-card .text-truncate{color:var(--muted);font-size:0.9rem;}
+.doc-card .btn{padding:0.35rem 0.6rem;font-size:0.82rem;border-radius:7px}
+
+/* Preview modal */
+.preview-modal{position:fixed;inset:0;background:rgba(11,15,25,0.6);display:flex;align-items:center;justify-content:center;z-index:1050;padding:20px;}
+.preview-modal-body{width:90%;max-width:1000px;border-radius:10px;}
+
+/* small screens */
+@media (max-width: 767px){
+  .sidebar{display:none;}
+  .content{padding:1rem;}
+}

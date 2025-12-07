@@ -1,0 +1,176 @@
+/* ===== Base card ===== */
+
+.doc-card {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+  border-color: #d1d5db;
+}
+
+.doc-card-body {
+  padding: 0.9rem 1rem 0.85rem;
+}
+
+/* ===== Header / title / badge ===== */
+
+.doc-card-header {
+  margin-bottom: 0.25rem;
+}
+
+.doc-card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;
+  line-height: 1.4;
+  max-height: 3.2rem;
+  overflow: hidden;
+}
+
+.doc-card-important-badge {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+}
+
+/* ===== Meta (uploader + date) ===== */
+
+.doc-card-meta {
+  font-size: 0.78rem;
+  color: #6b7280 !important;
+}
+
+.doc-card-meta strong {
+  color: #111827;
+}
+
+/* ===== Description ===== */
+
+.doc-card-description {
+  font-size: 0.84rem;
+  color: #4b5563;
+  line-height: 1.45;
+  max-height: 3.6rem;
+  overflow: hidden;
+}
+
+/* ===== Footer / buttons ===== */
+
+.doc-card-footer {
+  margin-top: 0.4rem;
+}
+
+.doc-card-actions-left,
+.doc-card-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.doc-card-btn {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.7rem;
+}
+
+/* ===== Share icon ===== */
+
+.doc-card-share-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.doc-card-share-icon:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* ===== Share popup ===== */
+
+.doc-card-share-popup {
+  position: absolute;
+  top: 30px;
+  right: 8px;
+  z-index: 10;
+  width: 230px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+}
+
+.doc-card-share-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.doc-card-share-close {
+  font-size: 0.6rem;
+}
+
+.doc-card-share-existing {
+  max-height: 80px;
+  overflow-y: auto;
+  margin-bottom: 4px;
+}
+
+.doc-card-share-existing-label {
+  font-size: 0.72rem;
+  margin-bottom: 2px;
+}
+
+.doc-card-share-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.doc-card-share-badge {
+  font-size: 0.7rem;
+  border-radius: 999px;
+}
+
+.doc-card-share-btn {
+  font-size: 0.78rem;
+  padding-block: 0.25rem;
+  border-radius: 999px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 576px) {
+  .doc-card-body {
+    padding: 0.85rem 0.85rem 0.8rem;
+  }
+
+  .doc-card-share-popup {
+    right: 6px;
+    width: 210px;
+  }
+
+  .doc-card-btn {
+    padding-inline: 0.55rem;
+  }
+}

@@ -1,0 +1,161 @@
+/* ===== Page background (overall) ===== */
+body {
+  background-color: #f4f7fb; /* soft light blue-grey */
+}
+
+/* ===== Upload card ===== */
+.upload-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem !important;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+/* ===== Header with right-side small image ===== */
+.upload-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.upload-page h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.3rem;
+}
+
+.upload-page > p.text-muted {
+  font-size: 0.85rem;
+}
+
+.upload-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+/* ===== Inputs ===== */
+.upload-page .form-control {
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.upload-page .form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+/* ===== Dropzone ===== */
+.dropzone {
+  border-radius: 10px;
+  border: 1px dashed #cbd5e1;
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  background-color: #eef2ff;
+  border-color: #2563eb;
+}
+
+.dropzone .fw-semibold {
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.dropzone .text-muted {
+  font-size: 0.78rem;
+}
+
+/* ===== Alerts ===== */
+.upload-page .alert {
+  font-size: 0.83rem;
+  border-radius: 8px;
+}
+
+/* ===== Progress bar ===== */
+.upload-page .progress {
+  height: 0.6rem;
+  border-radius: 999px;
+}
+
+.upload-page .progress-bar {
+  background-color: #2563eb;
+  font-size: 0.7rem;
+}
+
+/* ===== Buttons ===== */
+.upload-page .btn-primary,
+.upload-page .btn-outline-secondary {
+  border-radius: 999px;
+  font-size: 0.88rem;
+  padding: 0.35rem 1.1rem;
+}
+
+/* ===== Upload loading overlay ===== */
+.upload-loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(248, 250, 252, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.upload-loading-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* ===== Preview modal ===== */
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2050;
+}
+
+.preview-modal-body {
+  background: #ffffff;
+  border-radius: 12px !important;
+  max-width: 900px;
+  width: 95%;
+  max-height: 90vh;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 576px) {
+  .upload-page {
+    margin: 1rem;
+    padding: 1.2rem !important;
+  }
+
+  .upload-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .upload-page .d-flex.gap-2 {
+    flex-direction: column;
+  }
+
+  .upload-page .btn-primary,
+  .upload-page .btn-outline-secondary {
+    width: 100%;
+  }
+}

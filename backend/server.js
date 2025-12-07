@@ -11,8 +11,8 @@ app.use(express.json());
 
 
 // ----- ROUTES -----
-app.use("/api/uploads", require("./routes/uploadRoutes"));
-app.use("/api/docs", require("./routes/docRoutes"));
+app.use("/uploads", require("./routes/uploadRoutes"));
+app.use("/docs", require("./routes/docRoutes"));
 
 // pass Users via require OR ignore it if not needed here
 app.use("/user", require("./Apis/userApi"));

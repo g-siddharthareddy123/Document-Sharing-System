@@ -12,22 +12,7 @@ const allowedOrigins = [
   process.env.FRONTEND_URL         // production frontend (Render)
 ];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // allow requests with no origin (Postman, mobile apps)
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      } else {
-        return callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 
